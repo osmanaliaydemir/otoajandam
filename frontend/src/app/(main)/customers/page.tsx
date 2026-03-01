@@ -161,7 +161,7 @@ export default function CustomersPage() {
 
                                 <div className="flex items-start gap-4">
                                     {/* Avatar */}
-                                    <div className={`h-13 w-13 min-w-[52px] h-[52px] ${avatarColor(cust.fullName)} rounded-2xl flex items-center justify-center text-white font-black text-lg shrink-0 group-hover:scale-105 transition-transform duration-300`}>
+                                    <div className={`size-[52px] ${avatarColor(cust.fullName)} rounded-2xl flex items-center justify-center text-white font-black text-lg shrink-0 group-hover:scale-105 transition-transform duration-300`}>
                                         {getInitials(cust.fullName)}
                                     </div>
 
