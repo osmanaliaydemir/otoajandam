@@ -21,11 +21,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins(
+                "http://localhost:3000",
+                "https://localhost:3000",
+                "https://otoajandam.runasp.net"
+              )
               .AllowAnyMethod()
-              .AllowAnyHeader();
+              .AllowAnyHeader()
+              .AllowCredentials();
     });
 });
 
@@ -196,7 +201,7 @@ app.UseRateLimiter();
 app.UseMiddleware<ErrorHandlerMiddleware>();
 
 // CORS middleware
-app.UseCors("AllowAll");
+app.UseCors("AllowFrontend");
 
 // Authentication & Authorization middlewares
 app.UseAuthentication();
