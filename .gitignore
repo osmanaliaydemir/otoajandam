@@ -1,0 +1,27 @@
+# ==============================
+# Kök seviye genel ignore kuralları
+# ==============================
+
+# OS
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Gemini / AI tooling
+.gemini/
+.agents/
+.agent/
+
+# Ortam dosyaları (her yerden)
+**/.env
+**/.env.local
+**/.env.*.local

@@ -1,0 +1,36 @@
+# =============================
+# .NET / C# / ASP.NET Core
+# =============================
+bin/
+obj/
+*.user
+*.suo
+.vs/
+*.swp
+*~
+
+# Build / publish
+[Pp]ublish/
+*.publish/
+PublishProfiles/
+
+# User secrets
+*.pfx
+*.snk
+secrets.json
+
+# appsettings overrides (gizli bilgiler burada, .example versiyonunu commit edin)
+**/appsettings.json
+**/appsettings.Development.json
+**/appsettings.Production.json
+
+# Logs
+*.log
+logs/
+
+# EF Core migrations artı dosyaları (isteğe bağlı)
+# **/Migrations/
+
+# OS
+.DS_Store
+Thumbs.db
